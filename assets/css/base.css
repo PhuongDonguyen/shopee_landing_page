@@ -1,0 +1,149 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #ee4d2d;
+    --navbar-height: 26.08px;
+    --header-height: 120px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0px auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+/* For 5 items columns */
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    /* padding-left: 6px; */
+    /* padding-right: 6px; */
+    width: 20%;
+}
+/* For 3 items columns */
+.grid__column-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 33.3%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%; 
+}
+
+/* button---------------------------------------- */
+.btn {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* _________________Pagination_____________________ */
+.pagination-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination-2-item .pagination-2-item__link {
+    --height: 30px;
+    font-size: 1.9rem;
+    text-decoration: none;
+    display: block;
+    min-width: 40px;
+    text-align: center;
+    height: var(--height);
+    line-height: 30px;
+    border-radius: 2px;
+    color: rgba(0,0,0,.4);
+}
+
+.pagination-2-item:not(.pagination-2-item--active) .pagination-2-item__link:hover:not(.pagination-2-item__link-icon) {
+    color: #d0011b;
+}
+
+
+.pagination-2-item--active .pagination-2-item__link {
+    background-color: #d0011b;
+    color: #fff;
+}
+
+/* Animation---------------------------------------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(0);
+    } to {
+        transform: scale(1);
+    }
+}
+/* MODAL------------------------------------ */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: fadeIn linear 0.2s;
+}
+
+
